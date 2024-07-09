@@ -1,0 +1,133 @@
+:root{
+    --color-fill: #a972cb;
+    --hover-fill: #cb72aa;
+
+    --color-pulse: #ef6eae;
+    --hover-pulse: #ef8f6e;
+
+    --color-close: #ff7f82;
+    --hover-close: #ffdc7f;
+
+    --color-raise: #ffa260;
+    --hover-raise: #e5ff60;
+
+    --color-up: #e4cb58;
+    --hover-up: #94e458;
+
+    --color-slide: #8fc866;
+    --hover-slide: #66c887;
+
+    --color-offset: #19bc8b;
+    --hover-offset: #1973bc;
+}
+
+body {
+    color: #fff;
+    background: #17181c;
+}
+.btn {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    transition: 0.25s;
+}
+
+/* fill button */
+.fill {
+    color: var(--color-fill);
+}
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover-fill);
+    border-color: var(--hover-fill);
+    color: #fff;
+}
+
+/* pulse button */
+.pulse {
+    color: var(--color-pulse);
+}
+.pulse:hover,
+.pulse:focus {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+    border-color: var(--hover-pulse);
+    color: #fff;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover-pulse);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover-pulse);
+    }
+}
+
+/* close button */
+.close {
+    color: var(--color-close);
+}
+.close:hover,
+.close:focus {
+    box-shadow: inset -3.5em 0 0 0 var(--hover-close), inset 3.5em 0 0 0 var(--hover-close);
+    border-color: var(--hover-close);
+    color: #fff;
+}
+
+/* raise button */
+.raise {
+    color: var(--color-raise);
+}
+.raise:hover,
+.raise:focus {
+    border-color: var(--hover-raise);
+    color: #fff;
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover-raise);
+    transform: translateY(-0.25em);
+}
+
+/* up button */
+.up {
+    color: var(--color-up);
+}
+.up:hover,
+.up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover-up);
+    border-color: var(--hover-up);
+    color: #fff;
+}
+
+/* slide button */
+.slide {
+    color: var(--color-slide);
+}
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 6.9em 0 0 0 var(--hover-slide);
+    border-color: var(--hover-slide);
+    color: #fff;
+}
+
+/* offset button */
+.offset {
+    color: var(--color-offset);
+}
+.offset {
+    box-shadow: 0.3em 0.3em 0 0 var(--color-offset), inset 0.3em 0.3em 0 0 var(--color-offset);
+}
+
+.offset:hover,
+.offset:focus {
+    box-shadow: 0 0 0 0 var(--hover-offset), inset 6em 3.5em 0 0 var(--hover-offset);
+    border: var(--hover-offset);
+    color: #fff;
+}
+
