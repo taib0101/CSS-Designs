@@ -1,0 +1,189 @@
+:root {
+  --green: #2ecc71;
+  --red: #e74c3c;
+  --blue: #3498db;
+  --yellow: #f1c40f;
+  --purple: #8e44ad;
+  --turquoise: #1abc9c;
+}
+
+.btn {
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: transparent !important;
+  border: 2px solid var(--red) !important;
+  /* Replace with your desired color */
+  border-radius: 0.6em !important;
+  color: var(--red);
+  /* Replace with your desired color */
+  cursor: pointer !important;
+  display: flex !important;
+  align-self: center !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1;
+  /* margin: 20px; */
+  padding: 1.2em 2.8em;
+  text-decoration: none !important;
+  text-align: center !important;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+}
+
+.btn:hover {
+  color: #fff !important;
+  outline: 0;
+}
+
+/* first button */
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out !important;
+}
+
+.first:hover {
+  box-shadow: 0 0 40px 40px var(--red) inset !important;
+  /* Replace with your desired color */
+}
+
+/* second button */
+.second {
+  border-radius: 3em !important;
+  border-color: var(--turquoise) !important;
+  color: #fff !important;
+  background-image: linear-gradient(to right,
+      rgba(26, 188, 156, 0.4),
+      rgba(26, 188, 156, 0.4) 5%,
+      #1abc9c 5%,
+      #1abc9c 10%,
+      rgba(26, 188, 156, 0.4) 10%,
+      rgba(26, 188, 156, 0.4) 15%,
+      #1abc9c 15%,
+      #1abc9c 20%,
+      rgba(26, 188, 156, 0.4) 20%,
+      rgba(26, 188, 156, 0.4) 25%,
+      #1abc9c 25%,
+      #1abc9c 30%,
+      rgba(26, 188, 156, 0.4) 30%,
+      rgba(26, 188, 156, 0.4) 35%,
+      #1abc9c 35%,
+      #1abc9c 40%,
+      rgba(26, 188, 156, 0.4) 40%,
+      rgba(26, 188, 156, 0.4) 45%,
+      #1abc9c 45%,
+      #1abc9c 50%,
+      rgba(26, 188, 156, 0.4) 50%,
+      rgba(26, 188, 156, 0.4) 55%,
+      #1abc9c 55%,
+      #1abc9c 60%,
+      rgba(26, 188, 156, 0.4) 60%,
+      rgba(26, 188, 156, 0.4) 65%,
+      #1abc9c 65%,
+      #1abc9c 70%,
+      rgba(26, 188, 156, 0.4) 70%,
+      rgba(26, 188, 156, 0.4) 75%,
+      #1abc9c 75%,
+      #1abc9c 80%,
+      rgba(26, 188, 156, 0.4) 80%,
+      rgba(26, 188, 156, 0.4) 85%,
+      #1abc9c 85%,
+      #1abc9c 90%,
+      rgba(26, 188, 156, 0.4) 90%,
+      rgba(26, 188, 156, 0.4) 95%,
+      #1abc9c 95%,
+      #1abc9c 100%) !important;
+  background-position: 0 0;
+  background-size: 100% !important;
+  transition: all 300ms ease-in-out !important;
+}
+
+.second:hover {
+  background-position: 100px !important;
+}
+
+/* third button */
+.third {
+  border-color: var(--blue) !important;
+  color: #fff;
+  box-shadow: 0 0 40px 40px var(--blue) inset, 0 0 0 0 var(--blue) !important;
+  transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+  box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue) !important;
+  background-color: gray !important;
+}
+
+/* fourth button */
+.fourth {
+  border-color: var(--yellow) !important;
+  color: #fff;
+  background-image: linear-gradient(45deg, var(--yellow) 50%, transparent 50%) !important;
+  background-position: 100%;
+  background-size: 1000% !important;
+  transition: all 550ms linear !important;
+  height: max-content !important;
+  word-wrap: break-word;
+}
+
+.fourth:hover {
+  background-position: 0;
+}
+
+/* try focus */
+.fourth:focus {
+  color: var(--yellow);
+  outline: 0.7;
+}
+
+/* fifth button */
+.fifth {
+  border-color: var(--purple) !important;
+  /* border: 0; */
+  border-radius: 0;
+  color: var(--purple) !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 150ms ease-in-out;
+}
+
+.fifth:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: var(--purple);
+  z-index: -1;
+  transition: width 150ms ease-in-out;
+}
+
+.fifth:hover {
+  color: #fff !important;
+}
+
+.fifth:hover:after {
+  width: 110%;
+}
+
+/* sixth button */
+.sixth {
+  border-radius: 3em;
+  border-color: var(--green) !important;
+  color: var(--green) !important;
+  background-image: linear-gradient(to bottom, transparent 50%, #2ecc71 50%);
+  background-position: 0% 0%;
+  background-size: 210%;
+  transition: all 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.sixth:hover {
+  color: black !important;
+  background-position: 0 100%;
+}
